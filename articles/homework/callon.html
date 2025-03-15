@@ -1,1 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>随机点名</title>
+</head>
+<body>
+  <button onclick="document.getElementById('result').innerText = students[Math.floor(Math.random()*students.length)]">
+    点名
+  </button>
+  <p id="result"></p>
+  <script>
+    const students = ["小A", "小B", "小C"];
+  </script>
+</body>
+</html>
 
