@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>随机点名</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
-  <button onclick="document.getElementById('result').innerText = students[Math.floor(Math.random()*students.length)]">
+  <button onclick="document.getElementById('result').innerText = students[Math.floor(Math.random() * students.length)]">
     点名
   </button>
   <p id="result"></p>
@@ -14,4 +24,3 @@
   </script>
 </body>
 </html>
-
