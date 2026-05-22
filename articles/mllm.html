@@ -31,12 +31,24 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    .lecture {
+    .block {
+      margin-bottom: 40px;
+    }
+
+    .block-title {
+      color: #002147;
+      font-size: 28px;
+      border-bottom: 3px solid #002147;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .item {
       background: white;
       padding: 20px;
       margin-bottom: 16px;
@@ -44,16 +56,16 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
-    .lecture h2 {
+    .item h3 {
       margin-top: 0;
       color: #002147;
     }
 
-    .lecture p {
+    .item p {
       line-height: 1.6;
     }
 
-    .lecture a {
+    .item a {
       display: inline-block;
       margin-top: 10px;
       padding: 10px 16px;
@@ -63,7 +75,7 @@
       border-radius: 6px;
     }
 
-    .lecture a:hover {
+    .item a:hover {
       background: #004080;
     }
 
@@ -85,27 +97,43 @@
   </header>
 
   <main>
-    <section class="lecture">
-      <h2>Lecture 7: 新一代AI架构</h2>
-      <p>
+
+    <section class="block">
+      <h2 class="block-title">Lectures</h2>
+
+      <div class="item">
+        <h3>Lecture 7: 新一代AI架构</h3>
+        <p>
         This lecture introduces next-generation of AI architecture.
-      </p>
-      <a href="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/lecture7_r.pdf" target="_blank">Download Slides</a>
+        </p>
+        <a href="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/lecture7_r.pdf" target="_blank">Download Slides</a>   
+      </div>
     </section>
-    <section class="Assignment">
-      <h2>Assignment 1</h2>
-      <p>
-        This is Assignment 1.
-      </p>
-      <a href="slides/lecture4.pdf" target="_blank">Download Slides</a>
+
+    <section class="block">
+      <h2 class="block-title">Assignments</h2>
+
+      <div class="item">
+        <h3>Homework Assignment</h3>
+        <p>
+          This section provides homework assignments for the course.
+        </p>
+        <a href="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/homework%20assignment.pdf" target="_blank">Download Assignment</a>
+      </div>
     </section>
-    <section class="Presentation">
-      <h2>Reviews for Mid-Term Reports</h2>
-      <p>
-        Please provide rebuttal for the reviews.
-      </p>
-      <a href="slides/lecture4.pdf" target="_blank">Download Slides</a>
+
+    <section class="block">
+      <h2 class="block-title">Reviews</h2>
+
+      <div class="item">
+        <h3>Review Materials</h3>
+        <p>
+          This section provides review materials for exams and course preparation.
+        </p>
+        <a href="reviews/review.pdf" target="_blank">Download Review</a>
+      </div>
     </section>
+
   </main>
 
   <footer>
