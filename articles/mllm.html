@@ -6,86 +6,170 @@
   <title>Multimodal Models Course Slides</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #222;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #222;
+  }
 
-    header {
-      background: #002147;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+  header {
+    background: linear-gradient(135deg, #002147, #003b73);
+    color: white;
+    padding: 46px 20px 42px;
+    text-align: center;
+  }
 
+  header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 700;
+  }
+
+  header p {
+    margin: 12px 0 6px;
+    font-size: 18px;
+  }
+
+  header h2 {
+    margin: 8px 0 0;
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 0.92;
+  }
+
+  main {
+    max-width: 1050px;
+    margin: 36px auto;
+    padding: 0 22px;
+  }
+
+  .block {
+    margin-bottom: 42px;
+  }
+
+  .block-title {
+    color: #002147;
+    font-size: 26px;
+    border-bottom: 2px solid #002147;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .item {
+    background: white;
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  }
+
+  .item h3 {
+    margin-top: 0;
+    color: #002147;
+    font-size: 21px;
+  }
+
+  .item p {
+    line-height: 1.65;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .overview-figure {
+    width: 100%;
+    max-width: 680px;
+    max-height: 380px;
+    object-fit: contain;
+    display: block;
+    margin: 18px auto 22px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 22px;
+  }
+
+  .person-card {
+    background: white;
+    padding: 22px 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    text-align: center;
+  }
+
+  .person-card img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 14px;
+  }
+
+  .person-card a {
+    display: block;
+    color: #0040cc;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .person-card a:hover {
+    text-decoration: underline;
+  }
+
+  .person-card p {
+    margin: 8px 0 0;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #002147;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 15px;
+  }
+
+  .item a:hover {
+    background: #004080;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  @media (max-width: 700px) {
     header h1 {
-      margin: 0;
-      font-size: 36px;
+      font-size: 32px;
     }
 
-    header p {
-      margin-top: 10px;
+    header h2 {
       font-size: 18px;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .overview-figure {
+      max-width: 100%;
+      max-height: 260px;
     }
 
-    .block {
-      margin-bottom: 40px;
+    .person-card img {
+      width: 115px;
+      height: 115px;
     }
-
-    .block-title {
-      color: #002147;
-      font-size: 28px;
-      border-bottom: 3px solid #002147;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-
-    .item {
-      background: white;
-      padding: 20px;
-      margin-bottom: 16px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .item h3 {
-      margin-top: 0;
-      color: #002147;
-    }
-
-    .item p {
-      line-height: 1.6;
-    }
-
-    .item a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: #002147;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    .item a:hover {
-      background: #004080;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #666;
-      font-size: 14px;
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
