@@ -89,86 +89,60 @@
   }
 
   .people-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 22px;
+  display: grid;
+  gap: 22px;
+  align-items: start;
+}
+
+.team-row {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.person-card {
+  background: white;
+  padding: 22px 14px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.person-card img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+
+.person-card a {
+  display: block;
+  color: #0040cc;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.person-card a:hover {
+  text-decoration: underline;
+}
+
+.person-card p {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .team-row {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .person-card {
-    background: white;
-    padding: 22px 16px;
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-    text-align: center;
+@media (max-width: 520px) {
+  .team-row {
+    grid-template-columns: 1fr;
   }
-
-  .person-card img {
-    width: 135px;
-    height: 135px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 14px;
-  }
-
-  .person-card a {
-    display: block;
-    color: #0040cc;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .person-card a:hover {
-    text-decoration: underline;
-  }
-
-  .person-card p {
-    margin: 8px 0 0;
-    color: #666;
-    font-size: 14px;
-  }
-
-  .item a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 16px;
-    background: #002147;
-    color: white;
-    text-decoration: none;
-    border-radius: 7px;
-    font-size: 15px;
-  }
-
-  .item a:hover {
-    background: #004080;
-  }
-
-  footer {
-    text-align: center;
-    padding: 30px;
-    color: #666;
-    font-size: 14px;
-  }
-
-  @media (max-width: 700px) {
-    header h1 {
-      font-size: 32px;
-    }
-
-    header h2 {
-      font-size: 18px;
-    }
-
-    .overview-figure {
-      max-width: 100%;
-      max-height: 260px;
-    }
-
-    .person-card img {
-      width: 115px;
-      height: 115px;
-    }
-  }
+}
 </style>
 </head>
 
@@ -199,41 +173,34 @@
 
 
     <section class="block">
-      <h2 class="block-title">Course Instructors</h2>
+  <h2 class="block-title">Course Team</h2>
 
-      <div class="people-grid">
-        <div class="person-card">
-          <img src="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/wgr.png" alt="Instructor 1" />
-          <a href="https://cse.sysu.edu.cn/teacher/WangGuangrun" target="_blank">Guangrun Wang</a>
-          <p>Course instructor</p>
-        </div>
+  <div class="people-grid team-row">
+    <div class="person-card">
+      <img src="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/wgr.png" alt="Guangrun Wang" />
+      <a href="https://cse.sysu.edu.cn/content/6525" target="_blank">Guangrun Wang</a>
+      <p>Course instructor</p>
+    </div>
 
-      </div>
-    </section>
+    <div class="person-card">
+      <img src="YOUR_XIAO_LI_IMAGE_LINK" alt="Xiao Li" />
+      <a href="https://www.sysu-hcp.net/" target="_blank">Xiao Li</a>
+      <p>Teaching assistant</p>
+    </div>
 
-    <section class="block">
-      <h2 class="block-title">Teaching Assistants</h2>
+    <div class="person-card">
+      <img src="YOUR_XIAOXIN_LIN_IMAGE_LINK" alt="Xiaoxin Lin" />
+      <a href="https://www.sysu-hcp.net/" target="_blank">Xiaoxin Lin</a>
+      <p>Teaching assistant</p>
+    </div>
 
-      <div class="people-grid">
-        <div class="person-card">
-          <img src="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/lx.png" alt="Teaching Assistant 1" />
-          <a href="https://www.sysu-hcp.net/" target="_blank">Xiao Li</a>
-          <p>Teaching assistant</p>
-        </div>
-
-        <div class="person-card">
-          <img src="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/lxx.png" alt="Teaching Assistant 2" />
-          <a href="https://www.sysu-hcp.net/" target="_blank">Xiaoxin Lin</a>
-          <p>Teaching assistant</p>
-        </div>
-
-        <div class="person-card">
-          <img src="https://raw.githubusercontent.com/TheGreatAILab/TheGreatAILab.github.io/main/articles/mllm/zjy.png" alt="Teaching Assistant 3" />
-          <a href="https://www.sysu-hcp.net/" target="_blank">Jiaying Zhou</a>
-          <p>Teaching assistant</p>
-        </div>
-      </div>
-    </section>
+    <div class="person-card">
+      <img src="YOUR_JIAYING_ZHOU_IMAGE_LINK" alt="Jiaying Zhou" />
+      <a href="https://www.sysu-hcp.net/" target="_blank">Jiaying Zhou</a>
+      <p>Teaching assistant</p>
+    </div>
+  </div>
+</section>
 
     <section class="block">
       <h2 class="block-title">Lectures</h2>
