@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>多模态大模型原理与应用 Rebuttal 问题</title>
+  <style>
+    :root {
+      --border: #d0d7de;
+      --header-bg: #0f4c81;
+      --header-text: #ffffff;
+      --stripe: #f6f8fa;
+      --text: #1f2328;
+      --muted: #57606a;
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+    }
+    .page-title {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .meta {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      min-width: 1400px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--header-bg);
+      color: var(--header-text);
+      font-weight: 700;
+      text-align: center;
+      padding: 10px 8px;
+      border-right: 1px solid rgba(255,255,255,.25);
+    }
+    tbody td {
+      padding: 9px 10px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      vertical-align: top;
+      word-break: break-word;
+      white-space: normal;
+    }
+    tbody tr:nth-child(even) td { background: var(--stripe); }
+    tbody td:nth-child(1),
+    tbody td:nth-child(3) { text-align: center; white-space: nowrap; }
+    tbody td:nth-child(2),
+    tbody td:nth-child(4) { white-space: nowrap; }
+    th:nth-child(1), td:nth-child(1) { width: 56px; }
+    th:nth-child(2), td:nth-child(2) { width: 96px; }
+    th:nth-child(3), td:nth-child(3) { width: 110px; }
+    th:nth-child(4), td:nth-child(4) { width: 170px; }
+    th:nth-child(5), td:nth-child(5),
+    th:nth-child(6), td:nth-child(6),
+    th:nth-child(7), td:nth-child(7) { width: 320px; }
+    @media print {
+      body { padding: 0; }
+      .table-wrap { border: none; overflow: visible; }
+      thead th { position: static; }
+      table { min-width: 0; font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">多模态大模型原理与应用 Rebuttal 问题</h1>
+  <p class="meta">由 Excel 表格转换生成，共 67 条非空记录。</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>组号</th><th>姓名</th><th>学号</th><th>主题</th><th>问题1</th><th>问题2</th><th>问题3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>罗喆熙</td><td>22320090</td><td>课程内容的问答</td><td>你们构建 MMCourse-VQA benchmark 如何保证问题覆盖面、难度分布，以及不会出现和训练数据泄漏重叠的情况？</td><td>怎么保证模型一定遵循图像条件，而不是进入语言捷径？</td><td> PPT 里文字信息很多，怎么区分模型是 OCR/读文本得到答案，还是真正理解了图像内容？</td></tr>
+        <tr><td></td><td>王艺翔</td><td>21307243</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>潘胤臻</td><td>23336191</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>魏昊瑜</td><td>23336242</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>2</td><td>蔡文翔</td><td>23336023</td><td>多视角一致性</td><td>相机编码是直接作为条件输入，还是影响注意力/特征融合？如果相机参数有噪声会怎样？</td><td>你们使用 Blender 渲染数据集时，是如何保证数据分布能够泛化到真实世界图像的？如果训练数据主要是合成数据，那么模型在真实人物或真实场景上的效果会不会出现 domain gap 问题？</td><td>这是一个经典的计算机视觉问题。位姿控制是计算机视觉中的经典问题。这可能不属于多模态大模型的问题。</td></tr>
+        <tr><td></td><td>范翔烺</td><td>23336004</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>冯树佳</td><td>24312056</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>3</td><td>常淇博</td><td>23336028</td><td>口腔辅助诊断</td><td>如何获取相应的数据？如何抑制幻觉问题？</td><td>口腔诊断非常依赖图像质量和病例完整性，但真实场景里常常会遇到模糊照片、角度不标准、文本病例不规范甚至缺失。你们的方法在模态缺失或低质量输入下还能稳定工作吗？</td><td>生成诊断说明时，如何避免模型给出过度自信或不符合临床规范的建议？</td></tr>
+        <tr><td>4</td><td>丁子航</td><td>23312014</td><td>x-aigd</td><td>多模态大模型辅助真假判断时，如何避免它只学到数据集偏差而不是可见伪影？</td><td>你们提到模型能够利用“世界知识”判断阴影、光照、物理规律是否合理，那么如何验证模型是真的学到了物理一致性，而不是仅仅记住了训练集中常见的伪造模式？</td><td>负样本一定是有伪影吗？没有伪影的负样本是不是也可考虑？</td></tr>
+        <tr><td>5</td><td>翁國圍</td><td>23336246</td><td>金融财报</td><td>怎么评测分析分类的准确性？</td><td>你们提到银行、保险、证券行业的资产负债表与普通企业差异很大，那么模型如何处理这种行业间术语和财务结构的不一致？如果遇到新的财务术语怎么办？</td><td>财报图表、表格和正文三类信息分别怎么抽取和对齐？</td></tr>
+        <tr><td>6</td><td>徐泓昊</td><td>23336017</td><td>文本生成可打印性3Dmesh</td><td>可打印性的约束是怎么可微地加进来？可打印性怎么用数学来定义？</td><td>你们提到使用 trimesh 自动构造训练数据而不依赖人工标注，那么正负样本是怎么生成的？例如，一个 mesh 是如何被判定为“适合打印”或者“不适合打印”的，以及如何解决自动标签噪声的问题？</td><td>Trellis 到 MeshAnything 的中间点云会不会丢失细节，如何评估几何质量？如何定义可打印性？</td></tr>
+        <tr><td></td><td>吴修远</td><td>23336255</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>覃司翰</td><td>23336217</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>张浩宇</td><td>23336301</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>7</td><td>杨鑫</td><td>23336284</td><td>连续空间下的扩散语言模型</td><td>你们的方法是非自回归、并行生成整段文本的，但自然语言本身具有很强的时序依赖关系。那么模型如何保证生成文本的前后逻辑一致性和长程依赖，而不会出现局部合理但整体混乱的问题？</td><td>生成的结果，如果是图像，怎么转成文本？bit表达之间，怎么考虑距离的正交性？</td><td>受限 bit 位会不会导致表达能力不足？</td></tr>
+        <tr><td>8</td><td>刘昊</td><td>23336150</td><td>老人家庭监护</td><td>这是小模型还是大模型？和端到端大模型对比，有什么优势？</td><td>如何定义“风险等级”的标签？这些标签是由人工专家标注、规则生成，还是基于历史事件数据？如果标签本身存在主观性，会不会影响模型训练？</td><td>老人安全事件属于低频事件，怎么解决训练数据不平衡？</td></tr>
+        <tr><td></td><td>陈大有</td><td>23336033</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>刘国龙</td><td>23336149</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>9</td><td>甘善铭</td><td>23336005</td><td>多模态语义素材库</td><td>端到端模型可以直接把图作为输入，直接给出分析结果；现在你们的方法先进行分割，再把分割结果进行分析，是不是更落后了？如果分割本身就有错误，会影响后面的分析。</td><td>有没有和直接做 image-text embedding 检索的方法做过对比，特别是在复杂查询、细粒度查询上的提升？ <br> <br></td><td>为什么一定要先分割再检索？直接用全图 embedding 或检测框检索有什么不足？</td></tr>
+        <tr><td></td><td>罗杰</td><td>23336008</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>梁皓明</td><td>23336127</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>罗金浩</td><td>23336009</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>胡明瀚</td><td>23336088</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>10</td><td>王宇和</td><td>22355082</td><td>三平面机器人</td><td>指令编码和 3D 特征是在哪一层融合的？融合方式会影响空间定位能力吗？</td><td>机器人通过多个相机观察场景时，不同视角之间需要进行空间对齐。你们的方法是如何完成多视角融合的？如果相机存在标定误差或者部分视角缺失，TPV 表征是否还能稳定构建 3D 场景认知？</td><td>操作的精度，依赖于3D的精度吗？3D表示的精度，天然就很难，如何克服？</td></tr>
+        <tr><td>11</td><td>雷颜玮</td><td>23336103</td><td>AI Agent知识检索</td><td>你们提到使用 RAG 知识引擎，那么知识库更新后，系统如何保证检索结果的时效性和一致性？如果检索到的内容之间互相冲突，大模型最终会如何决定采用哪部分知识？</td><td>本项目是一个集成工作，如果只能用一句话来描述最核心的创新，它是什么？</td><td>HyDE 扩展提示词后，如何避免检索到看似相关但实际错误的内容？</td></tr>
+        <tr><td></td><td>李博阳</td><td>23336105</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>李兆然</td><td>23336123</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>12</td><td>杨希凯</td><td>23336281</td><td>图像和音频冲突</td><td>如果模态存在冲突，如何融合和消岐？</td><td>你们设计的问题类型会直接影响测试结果。例如，如果问题更容易从图像中回答，模型可能天然偏向视觉。你们是如何避免 evaluation bias 的？有没有保证音频和视觉分别都足以独立回答问题？</td><td>如果发现模型偏向某一模态，后续准备用数据增强、奖励设计还是结构改进来修正？</td></tr>
+        <tr><td></td><td>张文翔</td><td>23336310</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>13</td><td>王嘉葆</td><td>23336226</td><td>vggt+vla</td><td>触觉、视觉和 3D 点云模态信息冲突时，模型如何决定相信哪一个？</td><td>你们提到触觉信息会作为引导输入到 VLA，但触觉和视觉属于不同模态，时间尺度和数据形式差异很大。系统是如何完成视觉—触觉对齐的？例如机器人抓取失败时，触觉反馈会如何实时影响后续动作生成？</td><td>如果我们要预测未来复杂的几何和物理，模型容量怎么解决？如何构建触觉世界模型？</td></tr>
+        <tr><td></td><td>郑晋凯</td><td>23336329</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>14</td><td>张景翔</td><td>23336304</td><td>动画面部表情控制</td><td>这个方法相比传统的 motion capture 或直接端到端生成，真正新增的价值是什么？如果最后还需要人工反复调整，那你们的自动化贡献到底有多少，效率提升是否真的成立？</td><td>在本项目中，哪一部分是多模态大模型？大模型要求模型要大。你们提到的LLM控制和使用工具是怎么实现的？</td><td>AU/FACS 标准如何映射到最终动画控制参数？中间是否需要人工校准？</td></tr>
+        <tr><td>15</td><td>罗语涵</td><td>23336177</td><td>双视频跨视角</td><td>第一+第三人称视角QA的真实有现实意义应用是什么？如何剪辑成一段视频？</td><td>你们虽然进行了同步采样，但现实中两个视频可能存在时间偏移、遮挡或者动作不同步的问题。系统如何处理这种跨视角 temporal misalignment？</td><td>把来自不同视频的片段拼接成相同长度后，如何保证时间连续性和动作逻辑不被破坏？</td></tr>
+        <tr><td>16</td><td>钟泓瑨</td><td>23336338</td><td>文本生成长视频</td><td>如何保证video clip之间的视觉连贯？如何保证逻辑连贯？</td><td>你们采用自回归方式不断生成分镜，但长视频生成最大的难点之一就是误差累积。前面某个镜头人物长歪了、动作错了，后面往往会一路崩掉。你们的方法怎么避免这种 error propagation？</td><td>VLM引导如何使分镜之间的角色、场景和物体状态保持一致？</td></tr>
+        <tr><td></td><td>刘信杰</td><td>23336160</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>吴睿</td><td>23336251</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>肖金洋</td><td>22360300</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>周嘉尉</td><td>23336348</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>17</td><td>王宇晨</td><td>23336013</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>陈政宇</td><td>23336003</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>18</td><td>李成著</td><td>23336108</td><td>压缩多模态记忆</td><td>多模态记忆压缩时，哪些信息必须保留，哪些可以丢弃？判断标准是什么？</td><td>你们提出的是“非均匀模糊记忆系统”，那么这个记忆最终是服务于什么任务？例如视觉导航、长期视频理解还是机器人决策？不同任务对“关键信息”的定义不同，你们的方法是否需要针对具体任务重新设计信息密度指标？</td><td>多模态压缩是token压缩吗？图像内容怎么算记忆？SAM也要花时间，如果考虑SAM的计算复杂度，你们的压缩算法的总体复杂度是不是还变高了？</td></tr>
+        <tr><td></td><td>吴深荣</td><td>23336252</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>黄梓城</td><td>23331059</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>19</td><td>皮璇</td><td>23331114</td><td>教育数字化</td><td>如何避免幻觉？长视频的细节内容（知识）如何精确获取和保持？</td><td>多模态大模型本身已经能直接处理图文视频输入了，那你们系统相比直接调用现有 VLM 的增量价值是什么？</td><td>如果限定来源在教材，模型回答时如何防止引入教材外知识或幻觉？</td></tr>
+        <tr><td></td><td>丁奕轩</td><td>23331029</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>杜翊菲</td><td>23336062</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>陈碧凡</td><td>23336030</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>20</td><td>徐观炼</td><td>23336267</td><td>svg海报生成</td><td>如何评估生成 SVG 的可编辑性和空间正确性？</td><td>如何评价生成海报的质量？有没有考虑过视觉层次、排版美感、商业设计规范这些更主观但真实存在的问题？</td><td>创新在哪里？只是interSVG的工程复现？还是在复现的基础上，加入创新技术？</td></tr>
+        <tr><td></td><td>梁仲禧</td><td>23336129</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>钟俊喆</td><td>23336339</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>21</td><td>孙尔得吉</td><td>23306073</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>22</td><td>范益嘉</td><td>23336064</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>23</td><td>卢思源</td><td>23336168</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>刘沛浩</td><td>23336156</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>24</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>25</td><td>谭天喆</td><td>23336219</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>26</td><td>郑思扬</td><td>23336331</td><td>物理流体模拟</td><td>如何实现Sim2Real?</td><td>如果高质量流体渲染数据主要来自模拟环境，模型在真实游戏场景或者不同渲染引擎中是否会存在泛化问题？</td><td>物理代理提取的信息包括哪些变量，比如速度场、压力场、密度场？</td></tr>
+        <tr><td></td><td>钟旺烜</td><td>23336342</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>赵施琦</td><td>23336324</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>严浩文</td><td>23354177</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>郭靖宇</td><td>23320048</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>27</td><td>王文博</td><td>23336230</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>平泽玉</td><td>23336196</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td>吴显镔</td><td>23330137</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>28</td><td>欧镇滔</td><td>23336189</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>29</td><td>王一茗</td><td>23336234</td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>30</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
