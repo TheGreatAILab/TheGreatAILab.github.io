@@ -485,7 +485,7 @@
       <td >23336013</td>
       <td rowspan="5">多模态CoT解几何题</td>
       <td rowspan="5" class="question-col">预定义绘图函数是如何确定覆盖范围的？对于预定义函数之外的辅助构造方式，模型会如何处理？有没有考虑让模型自主组合已有工具来覆盖这类情况？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">如何从视觉变成代码的状态？如何保证视觉推理的准确性？</td>
       <td rowspan="5" class="question-col">修正机制如何设计？如果没有明确的错误检测标准，模型怎么知道自己哪里画错了？</td>
     </tr>
     <tr>
@@ -585,7 +585,7 @@
       <td >23306073</td>
       <td rowspan="5">遥感开放词汇多时序变化检测</td>
       <td rowspan="5" class="question-col">和逆动力学(IDM)之间有什么联系？如果我们想学习和训练模型，如何获取监督标签？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">构建新数据集时如何定义positive、hard negative？</td>
       <td rowspan="5" class="question-col">如何让模型区分&quot;季节性外观变化&quot;和&quot;真实地表变动&quot;？自然语言查询在这里能起到多大的消歧作用？</td>
     </tr>
     <tr>
@@ -610,7 +610,7 @@
       <td >23336064</td>
       <td rowspan="5">Unified Model多步思维链</td>
       <td rowspan="5" class="question-col">reward 信号是怎么定义的？对于生成任务（如图像生成），生成质量本身就难以量化，你们打算如何构造一个对思维链中间步骤也有效的 reward？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">你们有没有做过和直接端到端编辑模型的对比，证明这种“交错思考”带来的收益足以抵消额外开销和稳定性风险（比如错误累积等）？</td>
       <td rowspan="5" class="question-col">图像生成获编辑中，尤其是图像生成中，考虑先生成Mermaid 再生成图像，这有利于大的编辑（例如生图的逻辑发生很大的变化）。你这里如何考虑这种大的编辑？</td>
     </tr>
     <tr>
@@ -635,7 +635,7 @@
       <td >23336168</td>
       <td rowspan="5">学术论文多模态RAG问答系统</td>
       <td rowspan="5" class="question-col">你的方法中，哪一机制（方法论和理论层面）可以提高非文本的能力？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">重排序阶段的打分依据是什么，怎样证明它真正提升了复杂学术问题的召回和排序，而不是只是把结果再加工了一遍？</td>
       <td rowspan="5" class="question-col">你们提出分层多模态解析来区别于直接 OCR 纯文本，那么这个&quot;分层&quot;具体是按什么维度划分的？公式、图表、普通文本分别走哪条解析路径？各层之间的解析结果如何统一表示以便后续检索？</td>
     </tr>
     <tr>
@@ -685,7 +685,7 @@
       <td >23336219</td>
       <td rowspan="5">多模态长文档问答</td>
       <td rowspan="5" class="question-col">你们设计了三层记忆结构，那么每一层的边界是如何定义的？是按照信息粒度（如词、句、页、章节）划分，还是按照其他标准？如果记忆层次边界本身是模糊的，划分错误会如何影响后续的路由和问答？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">怎么保证层次化的记忆一定可以更好地记忆？</td>
       <td rowspan="5" class="question-col">cross-page attention graph，怎么证明它真的学到了跨页引用关系，而不是仅仅把相邻页面的信息硬连起来？</td>
     </tr>
     <tr>
@@ -735,7 +735,7 @@
       <td >23336230</td>
       <td rowspan="5">三模态融合手部感知VLA</td>
       <td rowspan="5" class="question-col">如何检测和防止模型坍缩到某一单一模态？对比损失和重建损失分别承担什么角色，两者如何协同避免坍缩？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">Egocentric video 中存在大量快速运动、遮挡和视角变化。很多时候目标物体甚至只出现几帧。你们的方法如何保证构建出的记忆不会受到这些噪声的干扰？</td>
       <td rowspan="5" class="question-col">触觉怎么表征？怎么保证人机之间的泛化鸿沟？怎么保证这些loss能够正确对齐动作？</td>
     </tr>
     <tr>
@@ -760,7 +760,7 @@
       <td >23336189</td>
       <td rowspan="5">基于RAG的多模态水果营养健康系统</td>
       <td rowspan="5" class="question-col">怎么保证高质量地构建这样的数据库？仅靠大模型来进行标注吗？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">市面大模型对于营养知识回答上存在幻觉风险。你们如何保证检索结果真的比模型原生回答更可靠？</td>
       <td rowspan="5" class="question-col">光线差异导致品种识别出错是你们列出的挑战，那么在数据和模型设计上，你们打算如何提升识别鲁棒性？</td>
     </tr>
     <tr>
@@ -785,7 +785,7 @@
       <td >23336234</td>
       <td rowspan="5">同态加密与多模态识别的融合</td>
       <td rowspan="5" class="question-col">你们通过投影矩阵将不同模态映射到同一特征空间，那么这个投影矩阵是如何训练的？对齐的监督信号来自哪里？</td>
-      <td rowspan="5" class="question-col"></td>
+      <td rowspan="5" class="question-col">如何在安全性、检索精度和实时性之间取得平衡？有没有实验比较不同加密参数下的性能变化？</td>
       <td rowspan="5" class="question-col">密文乘法同态性是怎么保证多模态对齐的？在本项目中，算法创新和多模态大模型的是直接关联的吗？</td>
     </tr>
     <tr>
