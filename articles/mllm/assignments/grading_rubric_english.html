@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Project Grading Rubric</title>
+  <style>
+    :root {
+      --border: #d8dee9;
+      --header: #17365d;
+      --header-text: #ffffff;
+      --subheader: #eef3f8;
+      --text: #1f2937;
+      --muted: #5b677a;
+      --bg: #ffffff;
+    }
+    body {
+      margin: 0;
+      padding: 32px;
+      background: #f7f9fc;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 28px 32px 36px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.2;
+      color: #0f172a;
+    }
+    .meta {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      background: white;
+    }
+    thead th {
+      background: var(--header);
+      color: var(--header-text);
+      padding: 12px 14px;
+      border: 1px solid var(--header);
+      font-size: 15px;
+      text-align: left;
+    }
+    th.criterion { width: 24%; }
+    th.points { width: 8%; text-align: center; }
+    th.details { width: 68%; }
+    tbody td {
+      vertical-align: top;
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+    tbody tr:nth-child(even) td { background: #fbfdff; }
+    td.criterion {
+      font-weight: 700;
+      color: #17365d;
+      background: var(--subheader);
+    }
+    td.points {
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+    p { margin: 0 0 10px; }
+    p:last-child { margin-bottom: 0; }
+    ol { margin: 0 0 10px 20px; padding: 0; }
+    li { margin-bottom: 6px; }
+    .subtle {
+      display: inline-block;
+      margin-top: 4px;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-left: 5px solid #17365d;
+      background: #eef3f8;
+      color: #243447;
+      font-size: 14px;
+    }
+    .total {
+      margin-top: 14px;
+      text-align: right;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Final Project Grading Rubric</h1>
+    <p class="meta">grading-rubric table. Total score: 100 points.</p>
+    <table aria-label="Final Project Grading Rubric">
+      <thead>
+        <tr>
+          <th class="criterion">Grading Criterion</th>
+          <th class="points">Points</th>
+          <th class="details">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="criterion">Novelty and Significance</td>
+          <td class="points">20</td>
+          <td class="details"><ol>
+  <li>The work is innovative, creative, and interesting. Examples include: <strong>(a)</strong> revealing previously unknown connections between two different methods; <strong>(b)</strong> exploring components of current methods that have not yet been sufficiently understood; <strong>(c)</strong> proposing improvements to existing methods; <strong>(d)</strong> explaining or analyzing the mechanisms and representations learned by existing models.</li>
+  <li>The work is significant and provides new scientific insights. Simply applying existing methods to a new dataset and reporting results is not enough. Examples of sufficient significance include: <strong>(a)</strong> revealing fundamental limitations of current multimodal large model methods and explaining, through experiments or theoretical analysis, why they perform poorly; <strong>(b)</strong> exploring how to incorporate additional structure or knowledge from the application domain into multimodal large models to improve results.</li>
+</ol>
+<p><strong>For projects, papers, and competitions:</strong> Does the work address a non-trivial problem? Does it introduce novel architectural improvements, data-management strategies, or optimization techniques?</p>
+<p><strong>For proposals:</strong> Is the identified research gap significant? Is the proposed solution highly original and conceptually well developed?</p>
+<p>The innovation and significance should be clearly described in the <strong>“Literature Review and Positioning”</strong> section of the technical report. Is the work sufficiently motivated by gaps in existing research? Include citations and analyze how the project extends, combines, challenges, and/or recontextualizes related work. The project should demonstrate an accurate understanding of the cited work and discuss its relevant assumptions, strengths, and limitations.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Scientific Rigor and Technical Correctness</td>
+          <td class="points">30</td>
+          <td class="details"><ol>
+  <li>The method is reliable, the mathematical derivations are correct, and the conclusions are supported by the results.</li>
+  <li>The experiments/analyses are well designed to test the scientific claims and are implemented fairly. Uncertainty should be quantified appropriately, and any claims of significance should be statistically supported. Appropriate baselines should be used, and relevant ablation studies and hyperparameter sweeps should be conducted where applicable.</li>
+</ol>
+<p><strong>Projects and papers (Options 1 and 3):</strong> Quality of experimental design, ablation studies, and baseline comparisons. For paper reproduction, the evaluation should consider the rigor of matching the original metrics and explaining any discrepancies.</p>
+<p><strong>Proposal (Option 2):</strong> Soundness of the theory, detailed mathematical formulation, feasibility analysis, and preliminary experiments or proof-of-concept that validate the core hypothesis.</p>
+<p><strong>Competition (Option 4):</strong> Robustness of the submitted model, final leaderboard ranking/metrics, and technical strategies used to overcome specific competition bottlenecks.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Multimodal Fusion</td>
+          <td class="points">10</td>
+          <td class="details"><p>Evaluate the degree of intrinsic connection among modalities. Simple concatenation of text and image embeddings should score lower than sophisticated cross-modal attention mechanisms or models whose pretraining objectives are aligned. Architectures capable of joint prediction should receive high scores.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Formatting Requirements<br><span class="subtle">Must follow the standard template</span></td>
+          <td class="points">20</td>
+          <td class="details"><p>The report should have a coherent structure. The writing should be clear and readable, and formulas should be properly typeset. Figures and tables should be clear, with appropriate labels and captions. Avoid adding unnecessary formatting that is unrelated to the content, reduces blog readability, or distracts readers.</p>
+<p><strong>Clarity</strong></p>
+<p>The project report should be well written and well organized so that readers can understand it. The report should focus on a clearly stated central hypothesis. Figures should be clear and should help readers understand your analysis.</p>
+<p>Is the research motivation clear? Does the report honestly discuss impact and limitations? Does it draw clear conclusions based on the experiments in the paper?</p>
+<p><strong>Required contents:</strong></p>
+<ol>
+  <li>Introduction or research motivation.</li>
+  <li>Background and related work, with citations.</li>
+  <li>Description of methods and experiments. For the Proposal Track, this section should describe or analyze the theory.</li>
+  <li>Analysis of experimental results, with figures presenting the results. For the Proposal Track, this section should describe the proposed experimental plan.</li>
+  <li>Conclusion or discussion, including limitations.</li>
+</ol>
+<p>The report should not substantially exceed the word limit.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Source Code</td>
+          <td class="points">5</td>
+          <td class="details"><p>The code must be clean, well documented, and reproducible.</p>
+<p><strong>Note for Option 2 (Proposal):</strong> The code may include preliminary experimental settings, simulated data pipelines, or architecture pseudocode.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Demo Video</td>
+          <td class="points">5</td>
+          <td class="details"><p>The video should clearly demonstrate the system in operation or vividly explain the proposed theoretical concept.</p>
+<p><strong>Note for Option 2 (Proposal):</strong> It may present the architecture workflow and animations. Animations, diagrams, or a digital whiteboard may be used to show how data flows through the proposed system.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Presentation Slides</td>
+          <td class="points">5</td>
+          <td class="details"><p>The 5-page PPT must concisely and clearly cover the problem, method, and results.</p></td>
+        </tr>
+        <tr>
+          <td class="criterion">Team Report</td>
+          <td class="points">5</td>
+          <td class="details"><p><strong>Very important and required.</strong> List the specific contribution of each team member. This will be used to calculate individual team members’ grades.</p></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="total">Total: 100 points</div>
+    <div class="note"><strong>Note on Grading Fairness:</strong> The grading rubric evaluates the depth of your scientific inquiry, not just the final output type. Choose the track that best aligns with your team.</div>
+  </main>
+</body>
+</html>
