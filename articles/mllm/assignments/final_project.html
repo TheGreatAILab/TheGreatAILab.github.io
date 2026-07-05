@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Project Task</title>
+
+  <style>
+    .deadline-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .deadline-row p {
+      margin: 0;
+    }
+
+    .wechat-qr {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+
 <section class="block">
   <h2 class="block-title">Final Project Task</h2>
 
@@ -36,16 +65,20 @@
 
   <div class="item">
     <h3>Submission Deadline</h3>
-    <p>
-      July. 12, 2026, via Enterprise WeChat.
-    </p>
-    <img
-    src="final-project.png"
-    alt="Enterprise WeChat QR Code"
-    width="90"
-    height="90"
-    />
+
+    <div class="deadline-row">
+      <p>
+        July. 12, 2026, via Enterprise WeChat. Scan the QR code here:
+      </p>
+
+      <img
+        src="wechat-qr.png"
+        alt="Enterprise WeChat QR Code"
+        class="wechat-qr"
+      />
+    </div>
   </div>
+  
   <div class="item">
     <h3>Submissions</h3>
     <p>
@@ -57,3 +90,6 @@
     </p>
   </div>
 </section>
+
+</body>
+</html>
